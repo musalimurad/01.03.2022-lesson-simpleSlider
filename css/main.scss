@@ -1,0 +1,129 @@
+
+
+#header{
+    padding: 20px;
+    background-color: red;
+    color: #fff;
+    position: relative;
+    transition: .5s ease;
+    &.active-header{
+        background-color: darkgreen;
+        color: red;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+    }
+    .nav-menu{
+        ul{
+            li{
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        #bar-ico{
+            font-size: 30px;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: .3s ease;
+            display: none;
+            &:hover{
+                color: #ccc;
+            }
+        }
+    }
+    .responsive-menu{
+        position: absolute;
+        top: 100%;
+        right: 50%;
+        background-color: black;
+        padding: 20px 35px 20px 35px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s ease;
+        &.active-menu{
+            opacity: 1;
+            visibility: visible;
+            right: 10px;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            li{
+                padding: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width:992px){
+    #header{
+        .nav-menu{
+            display: none;
+        }
+        .right{
+            #bar-ico{
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width:992px){
+    #header{
+        .responsive-menu{
+            display: none;
+        }
+    }
+}
+
+
+// Slider
+
+.all{
+    margin-top: 100px;
+    #slider-box{
+        border:3px solid red;
+        width: 805px;
+        height: 505px;
+        margin: auto;
+        position: relative;
+        vertical-align: middle;
+        img{
+            width: 800px;
+            height: 500px;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+
+        .next,.prev{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            i{
+                color: #fff;
+                font-size: 40px;
+                cursor: pointer;
+            }
+          
+
+        }
+        .prev{
+            left: 15px;
+        }
+        .next{
+            right: 15px;
+        }
+    }
+}

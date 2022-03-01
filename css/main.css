@@ -1,0 +1,133 @@
+#header {
+  padding: 20px;
+  background-color: red;
+  color: #fff;
+  position: relative;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+#header.active-header {
+  background-color: darkgreen;
+  color: red;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+}
+
+#header .nav-menu ul li {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .right #bar-ico {
+  font-size: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  display: none;
+}
+
+#header .right #bar-ico:hover {
+  color: #ccc;
+}
+
+#header .responsive-menu {
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  background-color: black;
+  padding: 20px 35px 20px 35px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+#header .responsive-menu.active-menu {
+  opacity: 1;
+  visibility: visible;
+  right: 10px;
+}
+
+#header .responsive-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#header .responsive-menu ul li {
+  padding: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  #header .nav-menu {
+    display: none;
+  }
+  #header .right #bar-ico {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  #header .responsive-menu {
+    display: none;
+  }
+}
+
+.all {
+  margin-top: 100px;
+}
+
+.all #slider-box {
+  border: 3px solid red;
+  width: 805px;
+  height: 505px;
+  margin: auto;
+  position: relative;
+  vertical-align: middle;
+}
+
+.all #slider-box img {
+  width: 800px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+}
+
+.all #slider-box .next, .all #slider-box .prev {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.all #slider-box .next i, .all #slider-box .prev i {
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.all #slider-box .prev {
+  left: 15px;
+}
+
+.all #slider-box .next {
+  right: 15px;
+}
+/*# sourceMappingURL=main.css.map */
